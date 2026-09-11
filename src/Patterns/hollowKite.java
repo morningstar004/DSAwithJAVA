@@ -25,6 +25,8 @@ public class hollowKite {
             }
             System.out.println();
         }
-        for(int row = 1 ; row <= diagonal; )
+        for(int row = 1 ; row <= diagonal; ){
+
+        }
     }
 }
