@@ -2,9 +2,9 @@ package Collection;
 
 import java.util.*;
 
-public class linkedlist {
+public class vector {
     static void main() {
-        LinkedList<String> arr = new LinkedList<>();
+        Vector<String> arr = new Vector<>();
 
         //add
         arr.add("hello");
@@ -18,13 +18,13 @@ public class linkedlist {
 
         //Or
 
-        List<Integer> list = new LinkedList<>();
+        Vector<Integer> list = new Vector<>();
         list.add(14);
         list.add(26);
         System.out.println(list);
         //Or
 
-        Collection<Integer> collection = new LinkedList<>();
+        Collection<Integer> collection = new Vector<>();
         collection.add(45);
         collection.add(15);
         collection.add(23);
@@ -79,14 +79,14 @@ public class linkedlist {
         System.out.println(list);
 
         //clone
-        LinkedList<String> anotherArr =  (LinkedList<String>)arr.clone();
+        Vector<String> anotherArr =  (Vector<String>)arr.clone();
         //arr.clone();
         System.out.println("Old List: " + arr);
         System.out.println("Cloned List: " + anotherArr);
 
         //ensureCapacity
-        LinkedList<String> arrayList = new LinkedList<>();
-//        arr.ensureCapacity(20);
+        Stack<String> arrayList = new Stack<>();
+        arr.ensureCapacity(20);
 
         //isEmpty
         System.out.println(arr.isEmpty());
@@ -94,21 +94,23 @@ public class linkedlist {
         //indexOf
         System.out.println(arr.indexOf("Pranjal"));
 
-        LinkedList<Integer> ll = new LinkedList<>();
-        ll.add(10);
-        System.out.println(ll);
-        ll.addFirst(1);
-        System.out.println(ll);
-        ll.addLast( 101);
-        System.out.println(ll);
+        Stack<Integer> st = new Stack<>();
+        st.push(10);
+        System.out.println(st);
 
-        ll.removeFirst();
-        System.out.println(ll);
+        st.push(11);
+        System.out.println(st);
 
-        ll.removeLast();
-        System.out.println(ll);
+        st.push(12);
+        System.out.println(st);
 
-        ll.getFirst();
-        System.out.println(ll.getLast());
+        st.pop();
+        System.out.println(st);
+
+        System.out.println(st.peek());
+
+        System.out.println(st.search(12));
+
+        System.out.println(st.empty());
     }
 }
