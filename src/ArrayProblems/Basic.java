@@ -117,6 +117,7 @@ public  class Basic {
             i++;
             j--;
         }
+        System.out.println();
     }
 
     public static void frequencyCheck(int [] arr){
@@ -128,14 +129,20 @@ public  class Basic {
 
         int maxFreq = -1;
         int maxFreqKey = -1;
+        int minFreq = 999;
+        int minFreqKey = 999;
         for(int key: freq.keySet()){
-
             if(freq.get(key) > maxFreq){
                 maxFreq = freq.get(key);
                 maxFreqKey = key;
             }
+            if(freq.get(key) < minFreq){
+                minFreq = freq.get(key);
+                minFreqKey = key;
+            }
         }
-        System.out.println("---->"+maxFreqKey);
+        System.out.println("Maximum Frequency is :- "+maxFreqKey);
+        System.out.println("Minimum Frequency is :- "+minFreqKey);
     }
 
     public static void binaryReverseArray(int[] arr) {
